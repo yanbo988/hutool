@@ -266,7 +266,7 @@ public class CollUtil {
 		}
 		return intersection;
 	}
-	
+
 	/**
 	 * 多个集合的交集<br>
 	 * 针对一个集合中存在多个相同元素的情况，只保留一个<br>
@@ -292,7 +292,7 @@ public class CollUtil {
 
 		if (ArrayUtil.isNotEmpty(otherColls)) {
 			for (Collection<T> otherColl : otherColls) {
-				if(isNotEmpty(otherColl)){
+				if (isNotEmpty(otherColl)) {
 					result.retainAll(otherColl);
 				} else {
 					// 有一个空集合就直接返回空
@@ -2777,6 +2777,42 @@ public class CollUtil {
 			if (isNotEmpty(collection)) {
 				collection.clear();
 			}
+		}
+	}
+
+	/**
+	 * 填充List，以达到最小长度
+	 *
+	 * @param <T>    集合元素类型
+	 * @param list   列表
+	 * @param minLen 最小长度
+	 * @param padObj 填充的对象
+	 * @since 5.3.10
+	 */
+	public static <T> void padLeft(List<T> list, int minLen, T padObj) {
+		Objects.requireNonNull(list);
+		if (list.isEmpty()) {
+			padRight(list, minLen, padObj);
+			return;
+		}
+		for (int i = list.size(); i < minLen; i++) {
+			list.add(0, padObj);
+		}
+	}
+
+	/**
+	 * 填充List，以达到最小长度
+	 *
+	 * @param <T>    集合元素类型
+	 * @param list   列表
+	 * @param minLen 最小长度
+	 * @param padObj 填充的对象
+	 * @since 5.3.10
+	 */
+	public static <T> void padRight(Collection<T> list, int minLen, T padObj) {
+		Objects.requireNonNull(list);
+		for (int i = list.size(); i < minLen; i++) {
+			list.add(padObj);
 		}
 	}
 

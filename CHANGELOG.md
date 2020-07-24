@@ -3,18 +3,33 @@
 
 -------------------------------------------------------------------------------------------------------------
 
-## 5.3.10 (2020-07-17)
+## 5.3.11 (2020-07-23)
+
+### 新特性
+### Bug修复
+
+-------------------------------------------------------------------------------------------------------------
+
+## 5.3.10 (2020-07-23)
 
 ### 新特性
 * 【db   】       增加DbUtil.setReturnGeneratedKeyGlobal（issue#I1NM0K@Gitee）
 * 【core 】       增加DataSize和DataSizeUtil（issue#967@Github）
 * 【core 】       ImgUtil增加异常，避免空指针（issue#I1NKXG@Gitee）
+* 【core 】       增加CRC16算法若干（pr#963@Github）
+* 【core 】       LocalDateTimeUtil增加format等方法（pr#140@Gitee）
+* 【http 】       UserAgentUtil增加Android原生浏览器识别（pr#975@Github）
+* 【crypto 】     增加ECIES算法类（issue#979@Github）
+* 【crypto 】     CollUtil增加padLeft和padRight方法（pr#141@Gitee）
+* 【core 】       IdCardUtil香港身份证去除首字母校验（issue#I1OOTB@Gitee）
 
 ### Bug修复
 * 【core   】     修复ZipUtil中finish位于循环内的问题（issue#961@Github）
 * 【core   】     修复CollUtil.page未越界检查的问题（issue#I1O2LR@Gitee）
+* 【core   】     修复StrUtil.removeAny的bug（issue#977@Github）
 
 -------------------------------------------------------------------------------------------------------------
+
 ## 5.3.9 (2020-07-12)
 
 ### 新特性
@@ -42,6 +57,7 @@
 * 【core   】     修复ChineseDate在1996年计算错误问题（issue#I1N96I@Gitee）
 
 -------------------------------------------------------------------------------------------------------------
+
 ## 5.3.8 (2020-06-16)
 
 ### 新特性
